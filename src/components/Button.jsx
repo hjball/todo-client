@@ -1,9 +1,9 @@
 import React from 'react';
 import '../App.css';
 
-export default ({ label, handleButton, className }) => (
+export default ({ label, onClick, className }) => (
 	<button 
-		onClick={ handleButton }
+		onClick={ onClick }
 		className={ className }>
 			{ label }
 	</button>
