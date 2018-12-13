@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TaskList extends Component {
-	constructor(props){
-		super(props)
-	}
-}
-
-export default TaskList;
+export default ({ state }) => (
+	<ul className="list-group">
+		{ state.tasks.map((item, idx) => (
+			<li className="list-group-item" key={ idx }>
+				{ item }
+			</li>
+		))}
+	</ul>
+);

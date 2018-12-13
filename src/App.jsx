@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './components/Header';
 import TaskInput from './components/forms/TaskInput';
+import TaskList from './components/TaskList';
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    this.setState({ ...this.state, tasks: this.state.tasks.concat([this.state.input]) });
+    this.setState({ ...this.state, tasks: this.state.tasks.concat([this.state.input]), input: "" });
   }
 
   handleChange(e) {
@@ -34,6 +35,8 @@ class App extends Component {
             state={ this.state } 
             handleSubmit={ this.handleSubmit} 
             handleChange={ this.handleChange }/>
+          <TaskList 
+            state={ this.state }/>
         </div>
       </React.Fragment> 
     )
