@@ -1,6 +1,4 @@
-const intial = {
-	inputTask: "",
+export default {
 	tasks: [],
+	input: "",
 };
-
-export default initial;
