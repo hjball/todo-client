@@ -9,6 +9,8 @@ class TaskList extends Component {
 
 	render () {
 		const { tasks } = this.props;
+		console.log( this.props );
+		console.log( tasks )
 
 		return (
 			<ul className="list-group">
@@ -17,9 +19,9 @@ class TaskList extends Component {
 					<li className="list-group-item" key={ index }>
 						{ item.task }
 						<div className="list-button">
-							<Button onClick={ tasks.handleCompleted } label="Done" className="btn btn-sm btn-success"/>
+							<Button onClick={ () => this.props.handleCompleted(item.id) } label="Done" className="btn btn-sm btn-success"/>
 							<Button onClick={ tasks.handleEdit } label="Edit" className="btn btn-sm btn-primary"/>
-							<Button onClick={ tasks.handleDelete } label="Delete" className="btn btn-sm btn-danger"/>
+							<Button onClick={ () => this.props.handleDelete(item.id) } label="Delete" className="btn btn-sm btn-danger"/>
 						</div>
 					</li>
 				))}

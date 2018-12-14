@@ -8,14 +8,14 @@ export const addTask = input => ({
 	task: input,
 });
 
-// export const completeTask = id => ({
-// 	type: 'completeTask',
-// 	id: id,
-// });
+export const completeTask = id => ({
+	type: 'completeTask',
+	id: id,
+});
 
-export const deleteTask = (id) => {
+export const removeTask = (id) => {
 	return {
-		type: "deleteTask",
+		type: "removeTask",
 		id: id,
 	};
 };
