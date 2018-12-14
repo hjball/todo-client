@@ -7,7 +7,7 @@ export default ({ input, handleSubmit, handleChange }) => (
 				className="form-control" 
 				onChange={ e => handleChange(e.currentTarget.value)} 
 				value={ input }/>
-			<button className="btn btn-success">Add task</button>
+			<button className="btn btn-success input-button">Add task</button>
 		</div>
 	</form>
 );
